@@ -33,16 +33,13 @@ all_choices = [choice1, choice2, choice3, choice4]
 def main():
 
     for subject in scores.keys():
-        score1 = int(st.text_input("From a scale of 0 to 5, How much do you like " + subject + "?:\n"))
-        while score1 < 0 or score1 > 5:
-            score1 = int(st.text_input("Please input a value between 0 and 5:\n"))
+        score1 = st.number_input("From a scale of 0 to 5, How much do you like " + subject + "?:\n", min_value=0, max_value=5)
 
         if subject == "Economics":
             score2 = score1
         else:
-            score2 = int(st.text_input("From a scale of 0 to 5, what is your average mark in " + subject + "?:\n"))
-            while score2 < 0 or score2 > 5:
-                score2 = int(st.text_input("Please input a value between 0 and 5:\n"))
+            score2 = st.number_input("From a scale of 0 to 5, what is your average mark in " + subject + "?:\n", min_value=0, max_value=5)
+
         scores[subject] = score1 + score2
 
     all_selections = set()
