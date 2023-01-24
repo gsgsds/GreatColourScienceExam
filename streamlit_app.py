@@ -33,7 +33,7 @@ all_choices = [choice1, choice2, choice3, choice4]
 def main():
 
     for subject in scores.keys():
-        scores[subject] = st.number_input("On a scale of 0 to 5, how much do you like " + subject + "?\n", min_value=0, max_value=5)
+        scores[subject] = st.number_input("On a scale of 0 to 10, how much do you like " + subject + "?\n", min_value=0, max_value=10)
 
     all_selections = set()
 
