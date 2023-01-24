@@ -33,12 +33,12 @@ all_choices = [choice1, choice2, choice3, choice4]
 def main():
 
     for subject in scores.keys():
-        score1 = st.number_input("From a scale of 0 to 5, How much do you like " + subject + "?:\n", min_value=0, max_value=5)
+        score1 = st.number_input("On a scale of 0 to 5, how much do you like " + subject + "?\n", min_value=0, max_value=5)
 
         if subject == "Economics":
             score2 = score1
         else:
-            score2 = st.number_input("From a scale of 0 to 5, what is your average mark in " + subject + "?:\n", min_value=0, max_value=5)
+            score2 = st.number_input("On a scale of 0 to 5, what is your average mark in " + subject + "?\n", min_value=0, max_value=5)
 
         scores[subject] = score1 + score2
 
